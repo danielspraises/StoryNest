@@ -1,0 +1,73 @@
+﻿
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover, read, and share stories with StoryNest.">
+  <title>StoryNest | Discover Stories</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script type="module" src="js/main.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="index.html">StoryNest<span>.</span></a>
+    <nav aria-label="Main navigation">
+      <a class="active" href="index.html">Explore</a>
+      <a href="create.html">Write a Story</a>
+      <a href="favorites.html">Favorites</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">EVERY STORY MATTERS</p>
+      <h1>Find your next <span>favorite story.</span></h1>
+      <p class="hero-description">Discover new worlds, share your imagination, and connect through stories.</p>
+      <a class="button button-primary" href="#discover">Explore Stories</a>
+    </section>
+
+```
+<section class="discover section-container" id="discover">
+  <div class="section-heading">
+    <div>
+      <p class="eyebrow">THE STORY COLLECTION</p>
+      <h2>Explore stories</h2>
+    </div>
+    <a class="text-link" href="create.html">Share your story →</a>
+  </div>
+
+  <div class="filters">
+    <label class="search-box">
+      <span class="visually-hidden">Search stories</span>
+      <input id="search-input" type="search" placeholder="Search stories or authors...">
+    </label>
+    <label>
+      <span class="visually-hidden">Filter by genre</span>
+      <select id="genre-filter">
+        <option value="All">All genres</option>
+        <option value="Fantasy">Fantasy</option>
+        <option value="Mystery">Mystery</option>
+        <option value="Romance">Romance</option>
+        <option value="Adventure">Adventure</option>
+        <option value="Horror">Horror</option>
+      </select>
+    </label>
+  </div>
+
+  <p id="results-count" class="results-count" aria-live="polite"></p>
+  <div id="story-grid" class="story-grid"></div>
+  <p id="empty-state" class="empty-state" hidden>No stories found. Try another search.</p>
+</section>
+```
+
+  </main>
+
+  <footer class="site-footer">
+    <a class="logo" href="index.html">StoryNest<span>.</span></a>
+    <p>A little corner of the internet for big imaginations.</p>
+    <p>&copy; <span id="current-year"></span> StoryNest</p>
+  </footer>
+</body>
+</html>
