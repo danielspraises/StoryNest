@@ -1,0 +1,56 @@
+﻿
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Read stories and share your thoughts on StoryNest.">
+  <title>Read a Story | StoryNest</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script type="module" src="js/story.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="index.html">StoryNest<span>.</span></a>
+    <nav aria-label="Main navigation">
+      <a href="index.html">Explore</a>
+      <a href="create.html">Write a Story</a>
+      <a href="favorites.html">Favorites</a>
+    </nav>
+  </header>
+
+  <main class="reading-container">
+    <a class="back-link" href="index.html">← Back to stories</a>
+    <article id="story-content" class="reading-card">
+      <p>Loading story...</p>
+    </article>
+
+```
+<section class="comments-section" aria-labelledby="comments-heading">
+  <h2 id="comments-heading">Reader comments</h2>
+  <p id="comment-count" class="results-count">Join the conversation.</p>
+
+  <form id="comment-form" class="comment-form">
+    <label for="comment-author">Your name</label>
+    <input id="comment-author" name="author" maxlength="50" required placeholder="Enter your name">
+
+    <label for="comment-text">Your comment</label>
+    <textarea id="comment-text" name="comment" maxlength="1000" required rows="4" placeholder="What did you think of this story?"></textarea>
+
+    <button class="button button-primary" type="submit">Post comment</button>
+  </form>
+
+  <div id="comments-list" class="comments-list"></div>
+</section>
+```
+
+  </main>
+
+  <footer class="site-footer">
+    <a class="logo" href="index.html">StoryNest<span>.</span></a>
+    <p>A little corner of the internet for big imaginations.</p>
+    <p>&copy; <span id="current-year"></span> StoryNest</p>
+  </footer>
+</body>
+</html>
