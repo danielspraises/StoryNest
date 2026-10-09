@@ -1,67 +1,121 @@
-﻿
-<!DOCTYPE html>
-
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Discover, read, and share stories with StoryNest.">
+  <meta name="theme-color" content="#4b3869">
   <title>StoryNest | Discover Stories</title>
+
   <link rel="stylesheet" href="css/style.css">
   <script type="module" src="js/main.js"></script>
+  <script type="module" src="js/nav.js"></script>
 </head>
 <body>
   <header class="site-header">
-    <a class="logo" href="index.html">StoryNest<span>.</span></a>
+    <a class="logo" href="index.html" aria-label="StoryNest home">
+      StoryNest<span>.</span>
+    </a>
+
     <nav aria-label="Main navigation">
-      <a class="active" href="index.html">Explore</a>
+      <a class="active" href="index.html" aria-current="page">Home</a>
+      <a href="explore.html">Explore Stories</a>
       <a href="create.html">Write a Story</a>
       <a href="favorites.html">Favorites</a>
     </nav>
+
+    <div class="account-nav" aria-label="Account options"></div>
   </header>
 
   <main>
     <section class="hero">
       <p class="eyebrow">EVERY STORY MATTERS</p>
       <h1>Find your next <span>favorite story.</span></h1>
-      <p class="hero-description">Discover new worlds, share your imagination, and connect through stories.</p>
-      <a class="button button-primary" href="#discover">Explore Stories</a>
+      <p class="hero-description">
+        Discover new worlds, share your imagination, and connect through stories.
+      </p>
+
+      <div class="hero-actions">
+        <a class="button button-primary" href="explore.html">
+          Explore Stories
+        </a>
+        <a class="button button-secondary" href="create.html">
+          Share Your Story
+        </a>
+      </div>
     </section>
 
-```
-<section class="discover section-container" id="discover">
-  <div class="section-heading">
-    <div>
-      <p class="eyebrow">THE STORY COLLECTION</p>
-      <h2>Explore stories</h2>
-    </div>
-    <a class="text-link" href="create.html">Share your story →</a>
-  </div>
+    <section class="discover section-container" id="discover">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">THE STORY COLLECTION</p>
+          <h2>Discover stories</h2>
+          <p>Find something wonderful to read today.</p>
+        </div>
 
-  <div class="filters">
-    <label class="search-box">
-      <span class="visually-hidden">Search stories</span>
-      <input id="search-input" type="search" placeholder="Search stories or authors...">
-    </label>
-    <label>
-      <span class="visually-hidden">Filter by genre</span>
-      <select id="genre-filter">
-        <option value="All">All genres</option>
-        <option value="Fantasy">Fantasy</option>
-        <option value="Mystery">Mystery</option>
-        <option value="Romance">Romance</option>
-        <option value="Adventure">Adventure</option>
-        <option value="Horror">Horror</option>
-      </select>
-    </label>
-  </div>
+        <a class="text-link" href="explore.html">
+          View all stories →
+        </a>
+      </div>
 
-  <p id="results-count" class="results-count" aria-live="polite"></p>
-  <div id="story-grid" class="story-grid"></div>
-  <p id="empty-state" class="empty-state" hidden>No stories found. Try another search.</p>
-</section>
-```
+      <div class="filters">
+        <label class="search-box">
+          <span class="visually-hidden">Search stories</span>
+          <input
+            id="search-input"
+            type="search"
+            placeholder="Search stories or authors..."
+            autocomplete="off"
+          >
+        </label>
 
+        <label>
+          <span class="visually-hidden">Filter by genre</span>
+          <select id="genre-filter">
+            <option value="All">All genres</option>
+            <option value="Fantasy">Fantasy</option>
+            <option value="Mystery">Mystery</option>
+            <option value="Romance">Romance</option>
+            <option value="Adventure">Adventure</option>
+            <option value="Horror">Horror</option>
+            <option value="Science Fiction">Science Fiction</option>
+            <option value="Drama">Drama</option>
+            <option value="Other">Other</option>
+          </select>
+        </label>
+      </div>
+
+      <p id="results-count" class="results-count" aria-live="polite">
+        Loading stories...
+      </p>
+
+      <div id="story-grid" class="story-grid" aria-live="polite"></div>
+
+      <p id="empty-state" class="empty-state" hidden>
+        No stories match your search. Try another keyword or genre.
+      </p>
+
+      <div class="section-footer">
+        <a class="button button-secondary" href="explore.html">
+          Explore the full collection →
+        </a>
+      </div>
+    </section>
+
+    <section class="creator-cta section-container">
+      <div>
+        <p class="eyebrow">YOUR IMAGINATION, YOUR WORDS</p>
+        <h2>Have a story to tell?</h2>
+        <p>
+          Create your account, publish your story, and share your imagination
+          with readers.
+        </p>
+      </div>
+
+      <a class="button button-primary" href="signup.html">
+        Become a Storyteller
+      </a>
+    </section>
   </main>
 
   <footer class="site-footer">
@@ -71,3 +125,5 @@
   </footer>
 </body>
 </html>
+
+

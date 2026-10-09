@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="View and manage your StoryNest profile.">
+  <title>My Profile | StoryNest</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script type="module" src="js/profile.js"></script>
+  <script type="module" src="js/nav.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="index.html">StoryNest<span>.</span></a>
+    <nav aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="explore.html">Explore Stories</a>
+      <a href="create.html">Write a Story</a>
+      <a href="favorites.html">Favorites</a>
+    </nav>
+    <div class="account-nav">
+      <a href="login.html">Sign in</a>
+      <a class="button button-primary" href="signup.html">Join StoryNest</a>
+    </div>
+  </header>
+
+  <main class="profile-container section-container">
+    <section class="profile-heading">
+      <p class="eyebrow">YOUR STORYNEST SPACE</p>
+      <h1>My <span>profile.</span></h1>
+      <p class="hero-description">
+        Manage your reader profile and see the stories you have shared.
+      </p>
+    </section>
+
+    <section class="profile-card" aria-labelledby="profile-name">
+      <div class="profile-avatar" aria-hidden="true">S</div>
+      <div class="profile-details">
+        <h2 id="profile-name">Your profile</h2>
+        <p id="profile-username" class="muted-text">@username</p>
+        <p id="profile-bio">Your bio will appear here.</p>
+      </div>
+      <a class="button button-secondary" href="login.html" id="profile-signin">
+        Sign In
+      </a>
+    </section>
+
+    <section class="profile-stories">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">YOUR CREATIONS</p>
+          <h2>My stories</h2>
+        </div>
+        <a class="button button-primary" href="create.html">Write a Story</a>
+      </div>
+
+      <p id="profile-message" class="form-message" role="status" aria-live="polite">
+        Sign in to view your profile and published stories.
+      </p>
+      <div id="profile-story-grid" class="story-grid"></div>
+      <p id="profile-empty-state" class="empty-state" hidden>
+        You haven't published any stories yet. Start writing your first one!
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="logo" href="index.html">StoryNest<span>.</span></a>
+    <p>A little corner of the internet for big imaginations.</p>
+    <p>&copy; <span id="current-year"></span> StoryNest</p>
+  </footer>
+</body>
+</html>
+

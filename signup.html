@@ -1,0 +1,115 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Join StoryNest and share your stories.">
+  <title>Create Account | StoryNest</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script type="module" src="js/auth.js"></script>
+  <script type="module" src="js/nav.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="index.html">StoryNest<span>.</span></a>
+    <nav aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="explore.html">Explore Stories</a>
+      <a href="create.html">Write a Story</a>
+    </nav>
+    <div class="account-nav">
+      <a href="login.html">Sign in</a>
+      <a class="button button-primary active" href="signup.html">Join StoryNest</a>
+    </div>
+  </header>
+
+  <main class="auth-container">
+    <section class="auth-card">
+      <p class="eyebrow">YOUR STORY STARTS HERE</p>
+      <h1>Join <span>StoryNest.</span></h1>
+      <p class="auth-description">
+        Create an account to publish stories and save your favorites.
+      </p>
+
+      <form id="signup-form" class="publish-form">
+        <div class="form-field">
+          <label for="signup-name">Display name</label>
+          <input
+            id="signup-name"
+            name="displayName"
+            type="text"
+            autocomplete="name"
+            placeholder="How readers will know you"
+            maxlength="60"
+            required
+          >
+        </div>
+
+        <div class="form-field">
+          <label for="signup-username">Username</label>
+          <input
+            id="signup-username"
+            name="username"
+            type="text"
+            autocomplete="username"
+            placeholder="Choose a username"
+            minlength="3"
+            maxlength="24"
+            pattern="[A-Za-z0-9_]+"
+            aria-describedby="username-help"
+            required
+          >
+          <p id="username-help" class="field-help">
+            Use 3â€“24 letters, numbers, or underscores.
+          </p>
+        </div>
+
+        <div class="form-field">
+          <label for="signup-email">Email address</label>
+          <input
+            id="signup-email"
+            name="email"
+            type="email"
+            autocomplete="email"
+            placeholder="you@example.com"
+            required
+          >
+        </div>
+
+        <div class="form-field">
+          <label for="signup-password">Password</label>
+          <input
+            id="signup-password"
+            name="password"
+            type="password"
+            autocomplete="new-password"
+            minlength="8"
+            placeholder="At least 8 characters"
+            required
+          >
+        </div>
+
+        <button id="signup-button" class="button button-primary auth-submit" type="submit">
+          Create Account
+        </button>
+
+        <p id="signup-message" class="form-message" role="status" aria-live="polite"></p>
+      </form>
+
+      <p class="auth-switch">
+        Already have an account? <a class="text-link" href="login.html">Sign in</a>
+      </p>
+      <p class="auth-switch">
+        <a class="text-link" href="index.html">â† Back to home</a>
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="logo" href="index.html">StoryNest<span>.</span></a>
+    <p>A little corner of the internet for big imaginations.</p>
+    <p>&copy; <span id="current-year"></span> StoryNest</p>
+  </footer>
+</body>
+</html>
+

@@ -2,6 +2,7 @@
 --purple: #4b3869;
 --purple-dark: #35254f;
 --cream: #fff8ed;
+--light-cream: #fffdfa;
 --gold: #d9a441;
 --ink: #292929;
 --muted: #74717a;
@@ -727,5 +728,491 @@ width: 100%;
 
   .story-inline-image {
     margin: 1rem 0;
+  }
+}
+
+
+
+/* New pages: Explore, authentication, and profile */
+
+.account-links {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.account-links > a:not(.button) {
+  color: inherit;
+  text-decoration: none;
+}
+
+.page-intro {
+  padding-top: 3rem;
+  padding-bottom: 1rem;
+}
+
+.page-intro h1,
+.auth-card h1,
+.profile-heading h1 {
+  color: #292929;
+}
+
+.page-intro h1 span,
+.auth-card h1 span,
+.profile-heading h1 span {
+  color: #4b3869;
+}
+
+.page-back-link {
+  margin-top: 2rem;
+}
+
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 3rem 1.25rem 4rem;
+  min-height: 65vh;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 480px;
+  padding: 2rem;
+  border: 1px solid #eee7df;
+  border-radius: 14px;
+  box-shadow: 0 8px 28px rgb(53 37 79 / 7%);
+}
+
+
+.auth-description,
+.muted-text {
+  color: #74717a;
+}
+
+.auth-description {
+  line-height: 1.6;
+}
+
+.auth-submit {
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+.auth-switch {
+  margin-top: 1.25rem;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+.field-help {
+  color: #74717a;
+  font-size: 0.85rem;
+  margin-top: 0.35rem;
+}
+
+.profile-container {
+  padding-top: 3rem;
+  padding-bottom: 4rem;
+}
+
+.profile-heading {
+  margin-bottom: 2rem;
+}
+
+.profile-card {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 1.5rem;
+  margin-bottom: 3rem;
+  background: #fff;
+  border: 1px solid #eee7df;
+  border-radius: 14px;
+}
+
+.profile-avatar {
+  display: flex;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  width: 72px;
+  height: 72px;
+  color: #fff8ed;
+  background: #4b3869;
+  border-radius: 50%;
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+.profile-details {
+  flex: 1;
+  min-width: 0;
+}
+
+.profile-details h2,
+.profile-details p {
+  overflow-wrap: anywhere;
+}
+
+.profile-details h2 {
+  margin-bottom: 0.25rem;
+}
+
+.profile-details p {
+  margin-top: 0.35rem;
+  margin-bottom: 0;
+}
+
+.profile-stories {
+  margin-top: 2rem;
+}
+
+.form-message:empty {
+  display: none;
+}
+
+.form-message.success {
+  padding: 0.85rem;
+  color: #175b35;
+  background: #e8f7ed;
+  border: 1px solid #a8d8b7;
+  border-radius: 8px;
+}
+
+.form-message.error {
+  padding: 0.85rem;
+  color: #8b2020;
+  background: #fff0f0;
+  border: 1px solid #e6b3b3;
+  border-radius: 8px;
+}
+
+@media (max-width: 800px) {
+  .site-header {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .account-links {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 600px) {
+  .auth-card {
+    padding: 1.25rem;
+  }
+
+  .profile-card {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .profile-details {
+    flex-basis: calc(100% - 100px);
+  }
+
+  .account-links {
+    width: 100%;
+  }
+}
+/* Shared signed-in account navigation */
+.account-links {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.profile-menu-wrapper {
+  position: relative;
+}
+
+.profile-menu-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  color: inherit;
+  text-decoration: none;
+}
+
+.profile-menu-avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  color: #fff8ed;
+  background: #4b3869;
+  font-weight: 700;
+}
+
+.profile-menu-label {
+  font-size: .95rem;
+}
+
+.profile-menu {
+  display: none;
+  position: absolute;
+  z-index: 1000;
+  top: 100%;
+  right: 0;
+  min-width: 150px;
+  padding: .5rem;
+  background: #fff;
+  border: 1px solid #eee7df;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgb(53 37 79 / 14%);
+}
+
+.profile-menu-wrapper:hover .profile-menu,
+.profile-menu-wrapper:focus-within .profile-menu {
+  display: grid;
+}
+
+.profile-menu a,
+.profile-logout {
+  display: block;
+  width: 100%;
+  padding: .7rem .75rem;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  color: #292929;
+  text-align: left;
+  text-decoration: none;
+  font: inherit;
+  cursor: pointer;
+}
+
+.profile-menu a:hover,
+.profile-logout:hover {
+  background: #fff8ed;
+}
+
+.profile-logout {
+  color: #8b2020;
+}
+
+@media (max-width: 600px) {
+  .profile-menu-label {
+    display: none;
+  }
+}
+
+/* StoryNest single-icon account menu */
+.account-nav,
+.account-links {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-left: auto;
+}
+
+.account-icon-wrap {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.account-icon-trigger {
+  display: inline-grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  border: 1px solid #e4d9c8;
+  border-radius: 50%;
+  background: #fff8ed;
+  color: #4b3869;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.account-icon-trigger:hover,
+.account-icon-trigger:focus-visible {
+  background: #4b3869;
+  color: #fff8ed;
+}
+
+.account-icon-trigger:focus-visible {
+  outline: 2px solid #d9a441;
+  outline-offset: 3px;
+}
+
+.account-icon-trigger svg {
+  display: block;
+  width: 23px;
+  height: 23px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.account-hover-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  z-index: 1000;
+  min-width: 165px;
+  padding: 0.65rem;
+  flex-direction: column;
+  gap: 0.15rem;
+  border: 1px solid #e4d9c8;
+  border-radius: 0.6rem;
+  background: #fff8ed;
+  box-shadow: 0 8px 24px rgb(0 0 0 / 12%);
+}
+
+.account-icon-wrap:hover .account-hover-menu,
+.account-icon-wrap.is-open .account-hover-menu {
+  display: flex;
+}
+
+.account-hover-menu a,
+.account-menu-button {
+  display: block;
+  width: 100%;
+  padding: 0.55rem 0.6rem;
+  border: 0;
+  border-radius: 0.35rem;
+  background: transparent;
+  color: #35254f;
+  font: inherit;
+  text-align: left;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.account-hover-menu a:hover,
+.account-menu-button:hover {
+  background: #f0e7db;
+}
+
+.account-menu-name {
+  margin: 0;
+  padding: 0.55rem 0.6rem;
+  border-bottom: 1px solid #e4d9c8;
+  color: #35254f;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+/* External book discovery: Open Library */
+.book-discovery {
+  padding-top: 3rem;
+  padding-bottom: 4rem;
+}
+
+.book-discovery h2 {
+  color: #35254f;
+  margin-bottom: 0.75rem;
+}
+
+.book-search-form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: 0.75rem;
+  margin: 1.5rem 0;
+}
+
+.book-search-form .search-box {
+  flex: 1 1 260px;
+}
+
+.book-search-form input {
+  width: 100%;
+  min-height: 48px;
+}
+
+.book-search-form button {
+  min-height: 48px;
+}
+
+.book-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 1.25rem;
+  margin-top: 1.25rem;
+}
+
+.book-card {
+  overflow: hidden;
+  border: 1px solid #e9e2ee;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 4px 16px rgb(53 37 79 / 6%);
+}
+
+.book-cover {
+  display: block;
+  width: 100%;
+  height: 230px;
+  object-fit: contain;
+  background: #f5f0f7;
+}
+
+.book-cover-placeholder {
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  color: #74717a;
+  text-align: center;
+}
+
+.book-card-body {
+  padding: 1rem;
+}
+
+.book-card h3 {
+  margin: 0 0 0.5rem;
+  color: #35254f;
+  font-size: 1.05rem;
+  overflow-wrap: anywhere;
+}
+
+.book-author,
+.book-year {
+  color: #74717a;
+  font-size: 0.9rem;
+  margin: 0.4rem 0;
+}
+
+.book-card .read-link {
+  display: inline-block;
+  margin-top: 0.6rem;
+}
+
+.api-credit {
+  margin-top: 1.5rem;
+  color: #74717a;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 520px) {
+  .book-search-form {
+    flex-direction: column;
+  }
+
+  .book-search-form button {
+    width: 100%;
+  }
+
+  .book-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.8rem;
+  }
+
+  .book-cover {
+    height: 180px;
+  }
+
+  .book-card-body {
+    padding: 0.75rem;
   }
 }
